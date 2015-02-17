@@ -16,7 +16,5 @@ deploy:
   secret_access_key:
     secure: MqiLusHLeQESXQUdIhIYWDG4gGdys6j5m2VagzKKSEri9pXu7HqmHkJjRqsIxlhn+fGQviV8eRRIB2T0zlsmR+l0ZfdvtI65zwe1M8QcjS4NMuJ38kcbuDP0tvq3vZd9NgVx4NUI8SCt9sfCnrnpBUg50BdfBa4Qg316vTmu8iw=
   bucket: "klib.io"
-  acl: public_read
   skip_cleanup: true
-  endpoint: "klib.io.s3.amazonaws.com"
-  region: "Frankfurt"
+  

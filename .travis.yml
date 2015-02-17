@@ -9,7 +9,7 @@ deploy:
     secure: D4RnGfJ95Z1yHxQuYlmagO7f2v27uEt2Ucv8pLA1TzfxZje2CSuddtNgJq5SWAMK8umvqlpR4YJuPe5zSjZG2Z0UGpo1vVdA5nDWAVfdc50t0p6oOGtG7GreAkA86V7JxITg3DQSpIfUWiZkFYRCMG4hzQgTAMZu3ueV+yOirzM=
   bucket: klib.io
   skip_cleanup: true
-  endpoint: "eu-central-1"
+  endpoint: "s3-eu-west-1.amazonaws.com"
   upload-dir: builds
   acl: public_read
   on:

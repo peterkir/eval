@@ -17,4 +17,5 @@ deploy:
     secure: MqiLusHLeQESXQUdIhIYWDG4gGdys6j5m2VagzKKSEri9pXu7HqmHkJjRqsIxlhn+fGQviV8eRRIB2T0zlsmR+l0ZfdvtI65zwe1M8QcjS4NMuJ38kcbuDP0tvq3vZd9NgVx4NUI8SCt9sfCnrnpBUg50BdfBa4Qg316vTmu8iw=
   bucket: "klib.io"
   skip_cleanup: true
+  region: eu-central-1
   

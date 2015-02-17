@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="default">
+
+    <target name="default" depends="test" description="description">
+        <echo message="nothing to do" />
+    </target>
+
+    <target name="test">
+        <echoproperties destfile="ant.properties"/>
+    </target>
+
+</project>

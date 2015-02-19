@@ -9,6 +9,7 @@ addons:
   debug: true
   artifacts: true
   region: "Frankfurt"
+  endpoint: "evaltravis.s3-website.eu-central-1.amazonaws.com"
   paths:
   -  $(git ls-files -o | tr "\n" ":")
   

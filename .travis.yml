@@ -1,14 +1,14 @@
 language: java
-
 jdk:
 - openjdk7
-
 install: ant
-
 deploy:
   provider: s3
-  skip_cleanup: true
+  access_key_id: AKIAI6FGWB26WLJZHBRQ
+  secret_access_key:
+    secure: frLJglOKleJZWLg+SSaidVF+YEyC10qzc/rLlrI9Dltjcid3JMFd8gkB21tZdW9bP9HYpDw6cjNAvQoiYia+PXm3hNau6FelDK5s76g9xkyY2Il2occMM/icQBizVxEACHWo3zQgB2hlJbgn3Y0IOJuVhr7ioxLzxovfvq+wJdg=
+  bucket: eval.s3
+  upload-dir: artifacts/$TRAVIS_REPO_SLUG/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER:artifacts/$TRAVIS_REPO_SLUG/$TRAVIS_COMMIT
   acl: public_read
-  paths:
-  -  $(git ls-files -o | tr "\n" ":")
-  
+  on:
+    repo: peterkir/eval

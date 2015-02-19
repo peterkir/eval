@@ -8,7 +8,7 @@ install: ant
 addons:
   debug: true
   artifacts: true
-  endpoint: "evaltravis.s3-website.eu-central-1.amazonaws.com"
+  region: "Frankfurt"
   paths:
   -  $(git ls-files -o | tr "\n" ":")
   

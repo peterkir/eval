@@ -9,6 +9,7 @@ addons:
   debug: true
   artifacts: true
   region: eu-west-1
+  target-paths: "artifacts/$TRAVIS_REPO_SLUG/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER:artifacts/$TRAVIS_REPO_SLUG/$TRAVIS_COMMIT"
   paths:
   -  $(git ls-files -o | tr "\n" ":")
   

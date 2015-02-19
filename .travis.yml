@@ -8,7 +8,7 @@ install: ant
 addons:
   debug: true
   artifacts: true
-  endpoint: "evaltravis.s3.amazonaws.com"
+  endpoint: "s3.eu-central-1.amazonaws.com"
   paths:
   -  $(git ls-files -o | tr "\n" ":")
   

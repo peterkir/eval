@@ -6,6 +6,8 @@ jdk:
 
 install: ant
 
+export ARTIFACTS_PATHS="$(git ls-files -o | tr "\n" ":")"
+
 deploy:
   provider: s3
   access_key_id: AKIAI6FGWB26WLJZHBRQ

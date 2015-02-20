@@ -11,9 +11,9 @@ install: ant
 
 addons:
     artifacts: true
+    debug: true
     region: eu-west-1
     skip_cleanup: true
-    debug: true
     paths:
     - $(git ls-files -o | tr "\n" ":")
     upload-dir: artifacts/$TRAVIS_JOB_NUMBER

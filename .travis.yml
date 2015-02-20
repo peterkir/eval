@@ -13,9 +13,9 @@ addons:
     artifacts: true
     region: eu-west-1
     skip_cleanup: true
-	debug: true
-	paths:
-	- $(git ls-files -o | tr "\n" ":")
+    debug: true
+    paths:
+    - $(git ls-files -o | tr "\n" ":")
     upload-dir: artifacts/$TRAVIS_JOB_NUMBER
 
 #deploy:

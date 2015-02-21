@@ -3,31 +3,30 @@ language: java
 jdk:
 - openjdk6
 - openjdk7
-- openjdk8
 - oraclejdk7
 - oraclejdk8
 
 install: ant
 
-addons:
-    artifacts: true
-    debug: true
-    region: eu-west-1
-    skip_cleanup: true
-    paths:
-    - $(git ls-files -o | tr "\n" ":")
-    upload-dir: artifacts/$TRAVIS_JOB_NUMBER
+#addons:
+#    artifacts: true
+#    debug: true
+#    region: eu-west-1
+#    skip_cleanup: true
+#    paths:
+#    - $(git ls-files -o | tr "\n" ":")
+#    upload-dir: artifacts/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER
 
-#deploy:
-#  provider: s3
-#  access_key_id: AKIAI6FGWB26WLJZHBRQ
-#  secret_access_key:
-#    secure: frLJglOKleJZWLg+SSaidVF+YEyC10qzc/rLlrI9Dltjcid3JMFd8gkB21tZdW9bP9HYpDw6cjNAvQoiYia+PXm3hNau6FelDK5s76g9xkyY2Il2occMM/icQBizVxEACHWo3zQgB2hlJbgn3Y0IOJuVhr7ioxLzxovfvq+wJdg=
-#  bucket: eval.s3
-#  region: eu-west-1
-#  local_dir: /home/travis/build/peterkir/eval/
-#  upload-dir: artifacts/$TRAVIS_JOB_NUMBER
-#  skip_cleanup: true
-#  acl: public_read
-#  on:
-#    repo: peterkir/eval
+deploy:
+  provider: s3
+  access_key_id: AKIAI6FGWB26WLJZHBRQ
+  secret_access_key:
+    secure: frLJglOKleJZWLg+SSaidVF+YEyC10qzc/rLlrI9Dltjcid3JMFd8gkB21tZdW9bP9HYpDw6cjNAvQoiYia+PXm3hNau6FelDK5s76g9xkyY2Il2occMM/icQBizVxEACHWo3zQgB2hlJbgn3Y0IOJuVhr7ioxLzxovfvq+wJdg=
+  bucket: eval.s3
+  region: eu-west-1
+  local_dir: /home/travis/build/peterkir/eval/
+  upload-dir: artifacts/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER
+  skip_cleanup: true
+  acl: public_read
+  on:
+    repo: peterkir/eval

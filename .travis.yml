@@ -6,7 +6,16 @@ jdk:
 - oraclejdk7
 - oraclejdk8
 
-install: ant
+before_install:
+- cat /etc/mavenrc
+- cat /home/travis/build.sh
+
+install: 
+- ant
+
+script:
+- java -version
+
 
 #addons:
 #    artifacts: true
@@ -17,13 +26,13 @@ install: ant
 #    - $(git ls-files -o | tr "\n" ":")
 #    upload-dir: artifacts/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER
 
-deploy:
-  provider: s3
-  bucket: eval.s3
-  region: eu-west-1
-  local_dir: /home/travis/build/peterkir/eval/
-  upload-dir: artifacts/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER
-  skip_cleanup: true
-  acl: public_read
-  on:
-    repo: peterkir/eval
+#deploy:
+#  provider: s3
+#  bucket: eval.s3
+#  region: eu-west-1
+#  local_dir: /home/travis/build/peterkir/eval/
+#  upload-dir: artifacts/$TRAVIS_BUILD_NUMBER/$TRAVIS_JOB_NUMBER
+#  skip_cleanup: true
+#  acl: public_read
+#  on:
+#    repo: peterkir/eval

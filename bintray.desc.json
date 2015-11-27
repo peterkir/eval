@@ -28,7 +28,11 @@
 
     "files":
         [
-        {"includePattern": "result.txt", "excludePattern": ".*/do-not-deploy/.*"}
+           {
+              "includePattern": "*.txt", 
+              "excludePattern": ".*/do-not-deploy/.*", 
+              "uploadPattern": "$TRAVIS_BRANCH/$TRAVIS_BUILD_NUMBER/$1"
+           }
         ],
     "publish": true
 }

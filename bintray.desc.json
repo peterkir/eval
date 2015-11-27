@@ -29,7 +29,7 @@
     "files":
         [
            {
-              "includePattern": "(.*\.txt)"
+              "includePattern": "(.*\.txt)", "uploadPattern": "$1"
            }
         ],
     "publish": true

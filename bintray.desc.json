@@ -28,10 +28,8 @@
 
     "files":
         [
-           {
-              "includePattern": "./(.*)", "uploadPattern": "$TRAVIS_BUILD_NUMBER/$1",
-              "includePattern": "./(.*)", "uploadPattern": "$1",
-           }
+           { "includePattern": "./(.*)", "uploadPattern": "$TRAVIS_BUILD_NUMBER/$1" },
+           { "includePattern": "./(.*)", "uploadPattern": "$1" }
         ],
     "publish": true
 }

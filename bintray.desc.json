@@ -29,7 +29,7 @@
     "files":
         [
            {
-              "includePattern": "(.*?\txt)", 
+              "includePattern": "./(.*?\\txt)", 
               "excludePattern": ".*/do-not-deploy/.*", 
               "uploadPattern": "$TRAVIS_BRANCH/$TRAVIS_BUILD_NUMBER/$1"
            }

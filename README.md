@@ -4,7 +4,11 @@ AppVeyor [![Build status](https://ci.appveyor.com/api/projects/status/x0n995iu4b
 
 # eval project for playing with the CI environments
 Evaluation repo on GitHub for 
-- Travis-CI
-- AppVeyor
-- Codeship
 
+CI - Continuos Integration via 
+- [Travis-CI](https://travis-ci.org/peterkir/eval)
+- [AppVeyor](https://ci.appveyor.com/project/PeterKirschner/eval)
+
+CD - Continuos Deployment via
+- AWS Amazon S3
+- [JFrog Bintray](https://bintray.com/peterkir/generic/eval/view) 

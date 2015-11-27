@@ -29,7 +29,7 @@
     "files":
         [
            {
-              "includePattern": "result.txt"
+              "includePattern": "(.*\.txt)"
            }
         ],
     "publish": true

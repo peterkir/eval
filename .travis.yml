@@ -4,14 +4,19 @@ jdk:
 - openjdk7
 - oraclejdk7
 - oraclejdk8
+
 before_install:
 - cat /etc/mavenrc
 - cat /home/travis/build.sh
+
 install:
 - ant
+
 script:
 - java -version
 - java -version > result.txt
+- ls -la
+
 deploy:
   provider: bintray
   file: bintray.desc.json

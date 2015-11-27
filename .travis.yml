@@ -15,7 +15,7 @@ install:
 script:
 - java -version
 - java -version > result.txt
-- ls -la
+- "ls -la"
 
 deploy:
   provider: bintray

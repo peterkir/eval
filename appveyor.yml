@@ -1,0 +1,10 @@
+version: '{build}'
+clone_depth: 10
+environment:
+  JAVA_HOME: C:\Program Files\Java\jdk1.7.0
+  TERM: dumb
+install:
+- echo "nothing to do"
+build_script:
+- ant build.xml
+

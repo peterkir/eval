@@ -18,12 +18,13 @@ script:
 - pwd
 - "ls -la"
 - DATE=`date +%Y%m%d-%H%M%S`
-- sed -i -e 's|$DATE|'$DATE'|g' bintray.desc.json
-- sed -i -e 's|$TRAVIS_BRANCH|'$TRAVIS_BRANCH'|g' bintray.desc.json
-- sed -i -e 's|$TRAVIS_BUILD_ID|'$TRAVIS_BUILD_ID'|g' bintray.desc.json
-- sed -i -e 's|$TRAVIS_BUILD_NUMBER|'$TRAVIS_BUILD_NUMBER'|g' bintray.desc.json
-- sed -i -e 's|$TRAVIS_COMMIT|'$TRAVIS_COMMIT'|g' bintray.desc.json
-- sed -i -e 's|$TRAVIS_JOB_NUMBER|'$TRAVIS_JOB_NUMBER'|g' bintray.desc.json
+- DESCFILE=bintray.desc.json
+- sed -i -e 's|$DATE|'$DATE'|g' $DESCFILE
+- sed -i -e 's|$TRAVIS_BRANCH|'$TRAVIS_BRANCH'|g' $DESCFILE
+- sed -i -e 's|$TRAVIS_BUILD_ID|'$TRAVIS_BUILD_ID'|g' $DESCFILE
+- sed -i -e 's|$TRAVIS_BUILD_NUMBER|'$TRAVIS_BUILD_NUMBER'|g' $DESCFILE
+- sed -i -e 's|$TRAVIS_COMMIT|'$TRAVIS_COMMIT'|g' $DESCFILE
+- sed -i -e 's|$TRAVIS_JOB_NUMBER|'$TRAVIS_JOB_NUMBER'|g' $DESCFILE
 
 deploy:
   provider: bintray

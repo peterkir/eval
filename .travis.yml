@@ -19,12 +19,17 @@ script:
 - "ls -la"
 - DATE=`date +%Y%m%d-%H%M%S`
 - DESCFILE=bintray.desc.json
+
 - sed -i -e 's|$DATE|'$DATE'|g' $DESCFILE
+- sed -i -e 's|$BINTRAY_PACKAGE|'eval'|g' $DESCFILE
+- sed -i -e 's|$VERSION|'0.1.0'|g' $DESCFILE
+
 - sed -i -e 's|$TRAVIS_BRANCH|'$TRAVIS_BRANCH'|g' $DESCFILE
 - sed -i -e 's|$TRAVIS_BUILD_ID|'$TRAVIS_BUILD_ID'|g' $DESCFILE
 - sed -i -e 's|$TRAVIS_BUILD_NUMBER|'$TRAVIS_BUILD_NUMBER'|g' $DESCFILE
 - sed -i -e 's|$TRAVIS_COMMIT|'$TRAVIS_COMMIT'|g' $DESCFILE
 - sed -i -e 's|$TRAVIS_JOB_NUMBER|'$TRAVIS_JOB_NUMBER'|g' $DESCFILE
+
 - cat $DESCFILE
 
 deploy:

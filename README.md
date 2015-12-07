@@ -2,6 +2,8 @@ TravisCI [![Build Status](https://travis-ci.org/peterkir/klib.io.png)](https://t
 
 AppVeyor [![Build status](https://ci.appveyor.com/api/projects/status/x0n995iu4brrhrmr?svg=true)](https://ci.appveyor.com/project/PeterKirschner/eval)
 
+JFrog Bintray [ ![Download](https://api.bintray.com/packages/peterkir/generic/eval/images/download.svg)](https://bintray.com/peterkir/generic/eval/_latestVersion)
+
 # eval project for playing with the CI environments
 Evaluation repo on GitHub for 
 
